@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    font-family: 'Inter';
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("https://fonts.googleapis.com/css?family=Inter") format(woff2);
+}
+
+.landingContainer {
+    border: 1px solid rgba(128, 128, 128, 0.527);
+    width: 526px;
+    background-color: #E5E5E5;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 20px 25px -10px rgba(0, 0, 0, 0.5)
+}
+
+.headerProfile {
+    margin-top: 15px;
+    margin-left: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.headerProfile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.swiper {
+    background-color: blue;
+}
+
+.reactions {
+    margin-top: 17px;
+    margin-left: 25px;
+    display: flex;
+    gap: 10px
+}
+
+.reactions button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.like {
+    position: relative;
+    background-size: cover;
+    background-image: url('./icons/heart.png');
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.likeActive {
+    position: relative;
+    animation-name: love;
+    animation-duration: 0.2s;
+    background-size: cover;
+    background-image: url('./icons/heartActive.png');
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+@keyframes love {
+    0% {
+        transform: scale(1);
+    }
+
+    90% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.swiper {
+    width: 526px;
+    height: 300px;
+}
+
+.post {
+    margin-top: 17px;
+    margin-left: 25px;
+    font-family: 'Inter'
+}
+
+.comments {
+    background-color: #F1F1F1;
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.comments input {
+    border: transparent;
+    outline: none;
+    height: 30px;
+    width: 400px;
+    background-color: #F1F1F1
+}
+
+.comments button {
+    color: #3D8AFF;
+    background-color: #F1F1F1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+}
+
+#commentsContainer {
+    padding: 1em;
+}
+
+#commentsContainer label {
+    font-weight: 650;
+}
+
+#commentsContainer span {
+    font-weight: 400;
+    height: auto;
+}

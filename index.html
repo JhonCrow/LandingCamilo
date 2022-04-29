@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Camilo Landing</title>
+    <link rel="stylesheet" href="./Styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./LandingJS.js" async></script>
+</head>
+
+<body>
+    <div class="landingContainer">
+        <div class="headerProfile">
+            <img src="./profile.jpg" alt="not found">
+            <p>
+                <b>Camilo_Cuervo</b> <br>
+                Medellín, Antioquia
+            </p>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="first"><img src="https://picsum.photos/600/300?random=1"></div>
+                <div class="swiper-slide" id="second"><img src="https://picsum.photos/600/300?random=2"></div>
+                <div class="swiper-slide" id="third"><img src="https://picsum.photos/600/300?random=3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    direction: 'horizontal',
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            </script>
+        </div>
+        <div class="reactions">
+            <button class="like" id="likeButton"></button>
+            <button><img src="./icons/comment.png" height="20px" width="20px"></button>
+            <button><img src="./icons/paper-plane.png" height="20px" width="20px"></button>
+        </div>
+        <div class="post">
+            <p>
+                <b>Lucas Credie</b> dolor sit amet, consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et
+                tristique proin. Mi enim ut eu cras ultrices eget et tristique proin.
+            </p>
+        </div>
+        <div id="commentsContainer"></div>
+        <div class="comments" id="container">
+            <input type="text" id="commentInput" name="comment"><button id="addButton">Post</button>
+        </div>
+    </div>
+</body>
+
+</html>
